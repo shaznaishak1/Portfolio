@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --card: #161616;
+      --text: #f5f5f5;
+      --accent: #0ef; /* Neon cyan */
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Hero Section */
+    header {
+      text-align: center;
+      padding: 6rem 1rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 20px rgba(0, 238, 255, 0.6);
+      animation: fadeInDown 1s ease;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      animation: fadeInUp 1s ease;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-weight: 300;
+      color: #aaa;
+      animation: fadeInUp 1.2s ease;
+    }
+    nav {
+      margin-top: 2rem;
+    }
+    nav a {
+      color: var(--text);
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* Section Styling */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 5rem 1.5rem;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--accent);
+      position: relative;
+    }
+    h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: var(--accent);
+      margin: 0.7rem auto 0;
+      border-radius: 2px;
+    }
+
+    /* About */
+    #about p {
+      max-width: 750px;
+      margin: auto;
+      text-align: center;
+      color: #ccc;
+      font-size: 1.1rem;
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid #222;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    }
+    .card h3 {
+      margin-bottom: 0.8rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .card p {
+      color: #bbb;
+    }
+
+    /* Skills */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .skill {
+      background: var(--card);
+      color: var(--accent);
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border: 1px solid #222;
+      transition: all 0.3s ease;
+    }
+    .skill:hover {
+      background: var(--accent);
+      color: var(--bg);
+      transform: scale(1.05);
+    }
+
+    /* Contact */
+    #contact {
+      text-align: center;
+    }
+    #contact p {
+      margin: 0.5rem 0;
+      color: #ccc;
+    }
+    #contact a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background: #050505;
+      color: #555;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      border-top: 1px solid #111;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header>
+    <img src="C:\Users\Dell\Downloads\1755756110944.jpeg" alt="Profile Picture">
+    <h1>Shazna Ishak</h1>
+    <p>Full-Stack Developer | IoT Engineer | Innovator</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a developer passionate about creating innovative solutions that combine 
+      technology, design, and real-world impact. With expertise in IoT, web apps, 
+      and AI, I aim to deliver projects that are not only functional but also meaningful.
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>IoT Water Monitoring System</h3>
+        <p>Real-time monitoring platform ensuring safe and sustainable water management in institutions.</p>
+      </div>
+      <div class="card">
+        <h3>AI Voice Assistant & Robotic Arm</h3>
+        <p>Voice-controlled robotic arm powered by Raspberry Pi, motors, and natural language AI.</p>
+      </div>
+      <div class="card">
+        <h3>Smart Pharmacy System</h3>
+        <p>Online pharmacy with prescription upload, secure login, and smart shopping cart integration.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span class="skill">HTML / CSS / JavaScript</span>
+      <span class="skill">PHP & MySQL</span>
+      <span class="skill">IoT (Arduino, Raspberry Pi)</span>
+      <span class="skill">Python</span>
+      <span class="skill">AI & Voice Assistants</span>
+      <span class="skill">Data Visualization (Chart.js)</span>
+      <span class="skill">Git & GitHub</span>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 Email: <a href="mailto:your@email.com">shaznaishak10@gmail.com</a></p>
+    <p>🔗 LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">www.linkedin.com/in/shazna-ishak</a></p>
+    <p>🌐 GitHub: <a href="https://github.com/yourusername" target="_blank">https://github.com/shaznaishak1</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Shazna Ishak | Built with ❤️ in Dark Mode</p>
+  </footer>
+
+</body>
+</html>
